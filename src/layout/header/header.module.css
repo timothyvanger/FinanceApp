@@ -1,3 +1,58 @@
 .active {
-  background-color: black;
+  background-color: #00afb9;
+  width: 100%;
+  text-align: center;
+}
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0081a7;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+header h2 {
+  color: white;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #61cb91;
+}
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.3rem;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #61cb91;
+  transition: all 0.2s ease;
+}
+a:hover {
+  padding-right: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.toggleNav {
+  position: absolute;
+  background-color: #00afb9;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 10%;
+  color: white;
+  top: 40%;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+.toggleNav:hover {
+  background-color: #0081a7;
+  border: 1px solid white;
 }
