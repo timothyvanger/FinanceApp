@@ -6,6 +6,8 @@
 }
 :root {
   --red: #e05252bd;
+  --cyan: #56cae7;
+  --color: #44b86a;
   --green: #61cb91;
   --bluegreen: #0081a7;
   --dark-bluegreen: #00afb9;
@@ -22,4 +24,7 @@ body {
 }
 #root {
   display: flex;
+}
+#portal {
+  position: relative;
 }

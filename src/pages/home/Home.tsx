@@ -1,5 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
 import style from "./homepage.module.css";
+import { useProfile } from "../../hooks/useProfile/useProfile";
+import { getCurrency } from "../../utili";
+import { useState } from "react";
+import HomeIncomeForm from "./HomeIncomeForm";
 
 type HomeSubPagesType = { name: string; link: string }[];
 
@@ -13,6 +17,9 @@ export const homeSubPages: HomeSubPagesType = [
 ];
 
 const Home = () => {
+  const { profile, clearProfile, changeIncome } = useProfile();
+  const [isIncomeInput, setIsIncomeInput] = useState(false);
+
   return (
     <>
       <div className={style.contentDashboard}>
@@ -35,7 +42,33 @@ const Home = () => {
           <Outlet />
         </div>
         <div className={style.informationTab}>
-          <p>profile stuff</p>
+          <img
+            src={profile.profilePic}
+            width={150}
+            height={150}
+            style={{ borderRadius: "50%", border: "1px solid black" }}
+          />
+          <p style={{ fontSize: "2rem" }}>{profile.name}</p>
+          <p className={style.incomeFormBtn}>
+            <button
+              className={style.incomeBtn}
+              onClick={() => setIsIncomeInput(true)}
+            >
+              Income:{" "}
+            </button>{" "}
+            {isIncomeInput ? (
+              <HomeIncomeForm
+                changeIncome={changeIncome}
+                setIsIncomeInput={setIsIncomeInput}
+              ></HomeIncomeForm>
+            ) : (
+              getCurrency(profile.income)
+            )}
+          </p>
+          <p>Master Balance: {getCurrency(profile.masterBalance)}</p>
+          <button onClick={() => clearProfile()}>
+            Clear income and master balace
+          </button>
         </div>
       </div>
     </>

@@ -1,3 +1,5 @@
+import { Account } from "../useAccount/AccountType";
+
 export type FinanceType = {
   title: string;
   date: string;
@@ -6,6 +8,7 @@ export type FinanceType = {
   id: number | string;
   cost: number;
   type: DifferentFinanceTypes;
+  accountSelection: Account;
 };
 export type DifferentFinanceTypes =
   | "expense"

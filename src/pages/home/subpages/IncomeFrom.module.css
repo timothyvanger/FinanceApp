@@ -1,0 +1,90 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  p {
+    margin: 0;
+  }
+}
+.subContainer {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+}
+.labelContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  & input {
+    font-size: 1.05rem;
+    padding: 0.5em;
+    background-color: transparent;
+    outline: none;
+    border: 0.13rem solid #0081a7;
+    border-radius: 1rem;
+  }
+  & p {
+    font-size: 1.15rem;
+  }
+  & textarea {
+    font-size: 1rem;
+    padding: 0.4em;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid #0081a7;
+  }
+}
+
+.labelContainer input::placeholder {
+  color: #0081a7;
+}
+
+.formBtnContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 0.4rem;
+  & button {
+    border: 1px solid #0081a7;
+    border-radius: 0.5rem;
+    height: 40px;
+    width: 100px;
+  }
+}
+
+.radioContainer {
+  align-self: flex-start;
+  display: flex;
+}
+
+#cancelBtn {
+  align-self: flex-start;
+  background-color: #00b0b988;
+  flex-grow: 1;
+  font-size: 0.8rem;
+  height: 10px;
+  width: 55px;
+  border: 1px solid #0080a770;
+  border-radius: 0.4rem;
+  transition: all 0.3s ease;
+}
+#cancelBtn:hover {
+  background-color: #1aa4ac;
+}
+#submitBtn {
+  font-size: 1rem;
+  max-width: 50%;
+  max-height: 30%;
+  border: 1px solid #0081a7;
+  border-radius: 0.5em;
+  background-color: #6fe9a6;
+}
+
+#submitBtn:hover {
+  color: white;
+  background-color: #0081a7;
+}

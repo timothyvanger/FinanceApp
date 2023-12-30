@@ -9,7 +9,7 @@
 .fCard > p {
   margin: 0;
   padding: 1rem;
-  width: 150px;
+  min-width: 200px;
   border-left: 1px solid #0081a7;
   color: #0081a7;
 }

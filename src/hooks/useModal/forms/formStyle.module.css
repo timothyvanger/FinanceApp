@@ -1,0 +1,36 @@
+.formContainer {
+  display: flex;
+  background-color: #00afb9;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid #1b7945a4;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.labelContainer {
+  padding: 1rem;
+  background-color: transparent;
+  border-left: 1px solid white;
+  outline: none;
+  min-width: 200px;
+
+  & input,
+  select {
+    color: #044558;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+.labelContainer input::placeholder {
+  color: #0c4d29;
+  font-style: italic;
+}
+
+.labelContainer:last-child {
+  border-right: 1px solid white;
+}

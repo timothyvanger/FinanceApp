@@ -1,0 +1,13 @@
+.modalContainer {
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+}
+.contentContainer {
+  margin: 20% auto;
+  width: fit-content;
+  background-color: aquamarine;
+  padding: 1rem;
+}
